@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giấy Khen - Trần Vũ Anh Đào</title>
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            /* Font chữ thường dùng cho văn bản trang trọng */
+            margin: 0;
+            padding: 0;
+            background-color: #fdf0f5;
+            /* Màu nền hồng nhạt (hoa anh đào) */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .certificate {
+            width: 700px;
+            /* Kích thước giấy khen A4 chiều ngang thường khoảng 29.7cm, đây là ví dụ */
+            height: auto;
+            /* Chiều cao tự động theo nội dung, hoặc có thể set cố định ~500px */
+            border: 10px solid #ffb6c1;
+            /* Viền hồng đậm hơn */
+            padding: 30px;
+            background-color: #fff;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+            position: relative;
+            text-align: center;
+            color: #333;
+        }
+
+        .header-top {
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+
+        .header-top .school-name {
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        .national-motto {
+            font-size: 15px;
+            font-weight: bold;
+            margin-bottom: 30px;
+        }
+
+        .certificate-title {
+            font-size: 36px;
+            font-weight: bold;
+            color: #d147a3;
+            /* Màu chữ tiêu đề (hồng đậm) */
+            margin-bottom: 30px;
+        }
+
+        .awardee-section {
+            margin-bottom: 20px;
+            font-size: 18px;
+        }
+
+        .awardee-name {
+            font-size: 24px;
+            font-weight: bold;
+            color: #d147a3;
+            /* Màu tên */
+            display: inline-block;
+            /* Để có thể thêm viền dưới nếu muốn */
+            padding-bottom: 5px;
+            border-bottom: 2px solid #ffb6c1;
+        }
+
+        .achievements {
+            font-size: 18px;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        .photo-placeholder {
+            width: 100px;
+            height: 100px;
+            /* Tỷ lệ ảnh thẻ thường thấy */
+            border: 2px dashed #ffb6c1;
+            margin: 20px auto;
+            /* Căn giữa */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            font-size: 14px;
+            color: #777;
+            background-color: #fff9fb;
+        }
+
+        .photo-placeholder img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+
+        .footer-section {
+            margin-top: 40px;
+            font-size: 16px;
+        }
+
+        .signature-area {
+            margin-top: 30px;
+            width: 200px;
+            /* Điều chỉnh độ rộng của khu vực ký tên */
+            float: right;
+            /* Đưa khu vực ký tên sang phải */
+            text-align: center;
+        }
+
+        .signature-area .title {
+            font-weight: bold;
+        }
+
+        .date-location {
+            text-align: right;
+            /* Căn phải cho ngày tháng */
+            font-style: italic;
+            clear: both;
+            /* Đảm bảo không bị ảnh hưởng bởi float */
+            padding-top: 10px;
+            /* Tạo khoảng cách với phần ký tên */
+        }
+
+        /* Hoa văn đơn giản (ví dụ) */
+        .certificate::before,
+        .certificate::after {
+            content: '';
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath d='M50 0 L61.8 38.2 L100 38.2 L69.1 61.8 L80.9 100 L50 76.4 L19.1 100 L30.9 61.8 L0 38.2 L38.2 38.2 Z' fill='%23FFC0CB'/%3E%3C/svg%3E");
+            /* Icon ngôi sao hồng nhạt làm ví dụ */
+            background-size: contain;
+            opacity: 0.5;
+        }
+
+        .certificate::before {
+            top: 15px;
+            left: 15px;
+        }
+
+        .certificate::after {
+            bottom: 15px;
+            right: 15px;
+            transform: rotate(180deg);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="certificate">
+        <div class="header-top">
+            <div class="school-name">TRƯỜNG TRUNG HỌC CƠ SỞ QUỐC THÁI</div>
+            <div>Phòng Giáo dục & Đào tạo An Giang</div>
+        </div>
+        <div class="national-motto">
+            CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM<br>
+            Độc lập - Tự do - Hạnh phúc
+        </div>
+
+        <div class="certificate-title">GIẤY KHEN</div>
+
+        <div class="awardee-section">
+            Tặng em:
+            <div class="awardee-name">Trần Vũ Anh Đào</div>
+        </div>
+
+        <div class="photo-placeholder">
+            <img src="./img1.jpg"" alt=" Ảnh thẻ">
+            <div>Ảnh thẻ</div>
+        </div>
+
+        <div class="achievements">
+            Đã có thành tích xuất sắc, đạt danh hiệu: <strong>Học Sinh Giỏi</strong><br>
+            Xếp loại hạnh kiểm: <strong>Tốt</strong><br>
+            Năm học: 2021 - 2025
+        </div>
+
+        <div class="footer-section">
+            <div class="date-location">
+                <em>An Giang, ngày 27 tháng 05 năm 2025</em>
+            </div>
+            <div class="signature-area">
+                <div class="title">HIỆU TRƯỞNG</div>
+                <br><br><br>
+                <em>(Ký tên, đóng dấu)</em>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
